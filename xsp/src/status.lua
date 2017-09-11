@@ -8,29 +8,32 @@ status.common={};
 status.common.startFight={success="gear",fail="startFight"};
 status.common.gear={success="autoFight",fail="resendFightInfo"};
 --status.common.autoFight={success="",fail=""};
-status.common.victory={success="noRGB",fail="defeat"};
-status.common.defeat={success="noResurgence",fail="victory"};
+status.common.victory={success="noRGB",fail="noResurgence"};
+status.common.defeat={success="again",fail=""};
 --status.common.saleRune={success="",fail=""};
 --status.common.keepRune={success="",fail=""};
 --status.common.saleFiveStarRune={success="",fail=""};
-status.common.noResurgence={success="again",fail="noResurgence"};
+status.common.noResurgence={success="defeat",fail="noResurgence"};
 --status.common.littleBoss={success="",fail=""};
 --status.common.finalBoss={success="",fail=""};
 status.common.again={success="startFight",fail="again"};
 --status.common.nextLevel={success="",fail=""};
 status.common.notEnoughEnergyBuy={success="",fail=""};
 status.common.notEnoughEnergyNotBuy={success="",fail=""};
-status.common.resendFightInfo={success={"gear"},fail={"gear"}};
+status.common.resendFightInfo={success="gear",fail="gear"};
 status.common.resendFightResult={success="victory",fail=""};
 status.common.noRGB={success="",fail="victory"};
+status.common.confirmReward={success="again",fail=""};
 
 
 --狗粮状态
 status.dogFood=status.common;
-status.dogFood.autoFight={success="victory",fail="resendFightResult"};
+status.dogFood.noAutoFight={success="autoFight",fail="resendFightResult"};
+status.dogFood.autoFight={success="victory",fail="noAutoFight"};
 status.dogFood.noRGB.success="saleRune";
-status.dogFood.saleRune={success="again",fail="saleRune"};
+status.dogFood.saleRune={success="again",fail="confirmReward"};
 status.dogFood.resendFightResult.fail="autoFight";
+status.dogFood.confirmReward.fail="saleRune";
 
 
 --觉醒状态

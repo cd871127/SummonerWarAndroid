@@ -1,57 +1,80 @@
 local common=require("common");
 local action={};
 
-function action.startFight()
-  return true;
+function action.startFight(param)
+  return common.clickPoint(param.points.startFight);
 end;
 
-function action.gear()
-  return true;
+function action.gear(param)
+  local res=common.checkPoint(param.points.gear);
+  return res;
 end;
 
-function action.victory()
-  return true;
+function action.noAutoFight(param)
+  return common.clickPoint(param.points.noAutoFight);
 end;
 
-function action.defeat()
-  return true;
+function action.autoFight(param)
+  return common.checkPoint(param.points.autoFight);
 end;
 
-function action.noResurgence()
-  return true;
+function action.victory(param)
+  return common.clickPoint(param.points.victory);
 end;
 
-function action.again()
-  return true;
+function action.noRGB(param)
+  local isVictory=common.checkPoint(param.points.victory);
+  if isVictory then
+    return false;
+  else
+    return common.clickPoint(param.points.noRGB);
+  end;
 end;
+
+function action.confirmReward(param)
+  return common.clickPoint(param.points.confirmReward);
+end;
+
+function action.noResurgence(param)
+  return common.clickPoint(param.points.noResurgence);
+end;
+
+function action.saleRune(param)
+  return false;
+end;
+
+function action.again(param)
+  return common.clickPoint(param.points.again);
+end;
+
+function action.defeat(param)
+  return common.clickPoint(param.points.defeat);
+end;
+
+
 
 function action.notEnoughEnergyBuy()
-  return true;
+  return false;
 end;
 
 function action.notEnoughEnergyNotBuy()
-  return true;
+  return false;
 end;
 
 function action.resendFightInfo()
-  return true;
+  sysLog("1111");
+  return false;
 end;
 
 function action.resendFightResult()
-  return true;
+  return false;
 end;
 
-function action.noRGB()
-  return true;
-end;
 
-function action.autoFight()
-  return true;
-end;
 
-function action.saleRune()
-  return true;
-end;
+
+
+
 
 --function action.noResurgence()
 --  return true;

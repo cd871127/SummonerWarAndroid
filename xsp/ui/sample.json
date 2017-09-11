@@ -1,0 +1,203 @@
+{
+   "style" : "default",
+   "config" : "save_111.dat",
+   "width" : 700,
+   "height" : 1080,
+   "cancelname" : "Cancel",
+   "okname" : "Let's Rock",
+   "cancelscroll" : true,
+   "countdown":10,
+   "views" : [
+      {
+         "text" : "基本设置",
+         "type" : "Page",
+         "views" : [
+            {
+               "align" : "center",
+               "color" : "0,0,225",
+               "size" : 30,
+                            "bg" : "0,0,0",    //RGB格式规定标签的背景色，不指定为透明
+               "text" : "设置：这是一行文本",
+               "type" : "Label"
+            },
+            {
+               "id" : "RadioGroup1",
+               "list" : "选项1,选项2,选项3,选项4,选项5,选项6,选项7",
+               "select" : "0",
+               "size" : 30,
+               "type" : "RadioGroup",
+               "orientation" : "vertical" //选项排布方式为竖排
+            },
+            {
+               "align" : "left",
+               "color" : "0,100,0",
+               "id" : "Edit1",
+               "kbtype" : "number",
+               "prompt" : "这是提示文本",
+               "size" : 25,
+               "text" : "这是预输入文本",
+               "type" : "Edit"
+            },
+            {
+               "id" : "CheckBoxGroup1",
+               "list" : "选项1,选项2,选项3,选项4,选项5,选项6,选项7",
+               "select" : "3@5",
+               "size" : 30,
+               "type" : "CheckBoxGroup",
+               "orientation" : "horizontal" //选项排布方式为智能横排
+            },
+            {
+               "id" : "ComboBox1",
+               "list" : "选项1,选项2,选项3,选项4,选项5,选项6,选项7",
+               "select" : "1",
+               "size" : 30,
+               "type" : "ComboBox"
+            },
+            {
+               "src" : "b.png", //这是来源为本地文件的图片
+               "type" : "Image"
+            },
+            {
+               "src" : "http://www.baidu.com/img/bdlogo.png", //这是来源为网络地址的图片
+               "type" : "Image"
+            }
+         ]
+      },
+      {
+         "text" : "水平布局",
+         "type" : "Page",
+         "views" : [
+            {
+               "color" : "100,100,100",
+               "size" : 30,
+               "text" : "以下是水平布局排列的三个控件",
+               "type" : "Label"
+            },
+            {
+               "height" : 300,
+               "width" : 700,
+               "id" : "group1",
+               "type" : "LinearLayout", //这是LinearLayout控件
+               "valign" : "top",
+               "views" : [
+//从这里开始是LinearLayout控件内部的子控件，不可嵌套LinearLayout控件，可添加LinearLayout、Page以外的所有控件
+                  {
+                     "color" : "100,100,100",
+                     "size" : 30,
+                     "text" : "选择",
+                     "type" : "Label",
+                     "width" : 100 
+                     //LinearLayout控件内部的子控件均需要指定一个width属性，不指定则无法显示
+                  },
+                  {
+                     "id" : "checkboxgroup2",
+                     "list" : "选项1,选项2,选项3",
+                     "select" : "2@3@",
+                     "type" : "CheckBoxGroup",
+                     "width" : 180
+                  },
+                  {
+                     "id" : "4",
+                     "list" : "选项1,选项2,选项3,选项4,选项5",
+                     "select" : "1",
+                     "size" : 20,
+                     "type" : "ComboBox",
+                     "width" : 250
+                  }
+               ]
+            },
+            {
+               "color" : "100,100,100",
+               "size" : 30,
+               "text" : "以下是一张默认布局方式的图片，水平布局可与普通布局样式联合使用", 
+               //这里是一个Label，跟上面的LinearLayout同层级
+               "type" : "Label",
+               "width" : 100
+            },
+            {
+               "src" : "b.png",
+               "type" : "Image"
+            },
+            {
+               "color" : "100,100,100",
+               "size" : 30,
+               "text" : "以下又是一个水平布局区域", 
+               //这里也是一个Label，跟上面的LinearLayout同层级
+               "type" : "Label"
+            },
+            {
+            //在同层级的情况下，可以多个LinearLayout联合使用，以下是第二个LinearLayout控件中的内容
+               "height" : 400,
+               "width" : 700,
+               "id" : "group1",
+               "type" : "LinearLayout", 
+               "valign" : "top",
+               "views" : [
+                  {
+                     "color" : "100,100,100",
+                     "size" : 30,
+                     "text" : "右边是一张图片",
+                     "type" : "Label",
+                     "width" : 150
+                  },
+                  {
+                     "src" : "b.png",
+                     "type" : "Image",
+                     "width" : "400"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "text" : "跳转示例",
+         "type" : "Page",
+         "views" : [
+            {
+               "color" : "100,110,200",
+               "extra" : [          //附加属性指定
+                  {
+                     "goto" : "http://www.baidu.com",       //跳转到网址
+                     "text" : "阅读原文"
+                  },
+                  {
+                     "goto" : "qq",     //跳转到QQ咨询
+                     "text" : "1602127440"
+                  }
+               ],
+               "size" : 30,
+               "text" : "阅读原文 QQ:1602127440",
+               "type" : "Label"
+            }
+         ]
+      },
+      {
+         "text" : "V1.6.7更新",
+         "type" : "Page",
+         "views" : [
+            {
+               "align" : "left",
+               "color" : "0,0,0",
+               "size" : 40,
+               "text" : "标签",
+               "type" : "Label",
+               "bg" : "100,100,100"
+            },
+            {
+               "id" : "web",
+               "url" : "http://www.baidu.com",
+               "type" : "WebView",
+               "height" : 500,
+               "width" : 800
+            },
+            {
+               "id" : "line",
+               "type" : "Line",
+               "color" : "0,0,255",
+               "height" : 7,
+               "width" : 800
+            }
+         ]
+      }
+   ]
+}
