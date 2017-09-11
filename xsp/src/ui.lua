@@ -970,6 +970,22 @@ function OBJDEF:new(args)
    return setmetatable(new, OBJDEF)
 end
 
+
+function badboy.getJSON() 
+  if badboy.json == nil then
+    local lo_json = {}
+    local obj = require('bblibs.JSON')
+    
+    lo_json.decode = function(x) return obj:decode(x) end
+    lo_json.encode = function(x) return obj:encode(x) end
+    lo_json.encode_pretty = function(x) return obj:encode_pretty(x) end;
+    
+    badboy.json = lo_json
+  end
+  return badboy.json
+end
+
+
 return OBJDEF:new()
 
 --
