@@ -40,7 +40,11 @@ function action.noResurgence(param)
 end;
 
 function action.saleRune(param)
-  return false;
+  return common.clickPoint(param.points.saleRune);
+end;
+
+function action.keepRune(param)
+  return common.clickPoint(param.points.keepRune);
 end;
 
 function action.again(param)
@@ -62,7 +66,6 @@ function action.notEnoughEnergyNotBuy()
 end;
 
 function action.resendFightInfo()
-  sysLog("1111");
   return false;
 end;
 
@@ -72,37 +75,6 @@ end;
 
 
 
-
-
-
-
---function action.noResurgence()
---  return true;
---end;
-
---function action.noResurgence()
---  return true;
---end;
-
---function action.noResurgence()
---  return true;
---end;
-
---function action.noResurgence()
---  return true;
---end;
-
---function action.noResurgence()
---  return true;
---end;
-
---function action.noResurgence()
---  return true;
---end;
-
---function action.noResurgence()
---  return true;
---end;
 
 
 return action;

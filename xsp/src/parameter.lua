@@ -1,6 +1,6 @@
 local paramter={};
 paramter.height,paramter.width = getScreenSize();
-paramter.startStatus="defeat";
+paramter.startStatus="startFight";
 
 --分辨率为1440 2560的设备
 function paramter.d14402560()
@@ -26,6 +26,11 @@ function paramter.d14402560()
 	points.noResurgence={{1613,901,1688,935},{{x=0,y=0,color=0xf8e9ad},{x=52,y=1,color=0xf8e9ad},{x=-2,y=22,color=0xf8e9ad},{x=56,y=21,color=0xf8e9ad},{x=-444,y=-722,color=0xffff37},{x=-414,y=-707,color=0xfcfd34},{x=-296,y=-698,color=0xeff22e},{x=-257,y=-645,color=0x9fbb33}},95,0,0,0};
 	--失败的图标
 	points.defeat={{1160,173,1200,205},{{x=0,y=0,color=0xffff40},{x=31,y=-7,color=0xf7f630},{x=116,y=2,color=0xffff3b},{x=180,y=-7,color=0xffff37},{x=220,y=17,color=0xffff7c},{x=187,y=82,color=0x9ab934},{x=79,y=95,color=0x80a12e},{x=-20,y=95,color=0x7b972a}},95,0,0,0};
+	--出售符文的按钮
+	points.saleRune={{946,928,1185,1191},{{x=0,y=0,color=0xf4e5a9},{x=0,y=-3,color=0x533810},{x=11,y=-4,color=0x533810},{x=15,y=-4,color=0xf4e5a9},{x=20,y=-3,color=0x5c4219},{x=27,y=0,color=0x533810},{x=32,y=0,color=0xf4e5a9},{x=84,y=42,color=0xf4e5a9},{x=78,y=34,color=0x533810}},95,0,0,0};
+	--保留符文的按钮
+	points.keepRune={{1351,870,1444,1230},{{x=0,y=0,color=0xc99954},{x=0,y=-2,color=0x533810},{x=0,y=4,color=0xc89753},{x=0,y=8,color=0x533810},{x=1,y=12,color=0xf4e5a9},{x=0,y=-8,color=0xf4e5a9},{x=39,y=-6,color=0xf4e5a9},{x=34,y=-10,color=0x533810},{x=34,y=-16,color=0xcb9d57}},95,0,0,0};
+	
 	return points;
 end;
 

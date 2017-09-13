@@ -44,7 +44,6 @@ common.checkPoint=function(colorPoint)
   
   common.clickPoint=function(colorPoint)
     local flag,x,y=common.checkPoint(colorPoint);
-		sysLog(x.." "..y);
     if flag then
       common.click(x,y);
     end

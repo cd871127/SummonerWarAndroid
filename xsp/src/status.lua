@@ -13,7 +13,7 @@ status.common.defeat={success="again",fail=""};
 --status.common.saleRune={success="",fail=""};
 --status.common.keepRune={success="",fail=""};
 --status.common.saleFiveStarRune={success="",fail=""};
-status.common.noResurgence={success="defeat",fail="noResurgence"};
+status.common.noResurgence={success="defeat",fail="victory"};
 --status.common.littleBoss={success="",fail=""};
 --status.common.finalBoss={success="",fail=""};
 status.common.again={success="startFight",fail="again"};
@@ -25,16 +25,17 @@ status.common.resendFightResult={success="victory",fail=""};
 status.common.noRGB={success="",fail="victory"};
 status.common.confirmReward={success="again",fail=""};
 
+--status.common.keyStatus={"startFight","autoFight","noAutoFight","noResurgence"};
+
 
 --狗粮状态
 status.dogFood=status.common;
-status.dogFood.noAutoFight={success="autoFight",fail="resendFightResult"};
+status.dogFood.noAutoFight={success="autoFight",fail="noAutoFight"};
 status.dogFood.autoFight={success="victory",fail="noAutoFight"};
 status.dogFood.noRGB.success="saleRune";
 status.dogFood.saleRune={success="again",fail="confirmReward"};
 status.dogFood.resendFightResult.fail="autoFight";
 status.dogFood.confirmReward.fail="saleRune";
-
 
 --觉醒状态
 
