@@ -8,7 +8,7 @@ function main()
   if ret==0 then
     return;
   end;
-  local fightType={"dogFood","1","2"};
+  local fightType={"dogFood","awake","rune"};
   param.repeatCount=tonumber(result['repeatCount']);
   param.fightType=fightType[tonumber(result['fightType'])+1];
   param.isBuyEnergy=false;

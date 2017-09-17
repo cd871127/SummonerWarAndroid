@@ -33,20 +33,21 @@ common.checkPoint=function(colorPoint)
   --生成findColor函数 -table
   local x, y = findColor(colorPoint[1],colorPoint[2],colorPoint[3],colorPoint[4],colorPoint[5],colorPoint[6]);
   keepScreen(false);
---  local result;
+  --  local result;
   if x>-1 and y>-1 then
     return true,x,y;
   else
     return false,x,y;	
   end
---  return result
-	end;
-  
-  common.clickPoint=function(colorPoint)
-    local flag,x,y=common.checkPoint(colorPoint);
-    if flag then
-      common.click(x,y);
-    end
-    return flag;
-  end;
-  return common;
+  --  return result
+end;
+
+common.clickPoint=function(colorPoint)
+  local flag,x,y=common.checkPoint(colorPoint);
+  if flag then
+    common.sleep(0.5);
+    common.click(x,y);
+  end
+  return flag;
+end;
+return common;

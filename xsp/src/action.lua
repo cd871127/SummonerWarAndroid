@@ -55,8 +55,6 @@ function action.defeat(param)
   return common.clickPoint(param.points.defeat);
 end;
 
-
-
 function action.notEnoughEnergyBuy()
   return false;
 end;
@@ -65,15 +63,33 @@ function action.notEnoughEnergyNotBuy()
   return false;
 end;
 
-function action.resendFightInfo()
-  return false;
+function action.resendFightInfo(param)
+  return common.clickPoint(param.points.resendFightInfo);
 end;
 
-function action.resendFightResult()
-  return false;
+function action.resendFightResult(param)
+  return common.clickPoint(param.points.resendFightResult);
 end;
 
+function action.finalBoss(param)
+  local flag=common.checkPoint(param.points.finalBoss);
+  if flag then
+    common.click(1263,661);
+    return true;
+  else
+    return false;
+  end
+end;
 
+function action.littleBoss(param)
+  local flag=common.checkPoint(param.points.littleBoss);
+  if flag then
+    common.click(1601,335);
+    return true;
+  else
+    return false;
+  end
+end;
 
 
 
