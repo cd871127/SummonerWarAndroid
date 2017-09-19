@@ -10,12 +10,12 @@ function status.init.common()
   status.common.gear={success="autoFight",fail="resendFightInfo"};
   status.common.victory={success="noRGB",fail="noResurgence"};
   status.common.defeat={success="again",fail="defeat"};
-  status.common.noResurgence={success="defeat",fail="victory"};
+  status.common.noResurgence={success="defeat",fail="resendFightResult"};
   status.common.again={success="startFight",fail="again"};
   status.common.notEnoughEnergyBuy={success="",fail=""};
   status.common.notEnoughEnergyNotBuy={success="",fail=""};
   status.common.resendFightInfo={success="gear",fail="gear"};
-  status.common.resendFightResult={success="victory",fail=""};
+  status.common.resendFightResult={success="victory",fail="victory"};
   status.common.noRGB={success="",fail="victory"};
   status.common.confirmReward={success="again",fail=""};
 end;
