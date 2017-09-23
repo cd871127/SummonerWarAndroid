@@ -18,7 +18,7 @@ function controller.exec(param)
 	status['init'][fightType]();
   
   while loopCount<param.repeatCount do
-		common.showMsg("战斗类型: "..fightType.."\n战斗计数: "..tostring(loopCount+1).."/"..tostring(param.repeatCount).."/"..tostring(failCount).."\n购买体力: "..'false');
+		common.showMsg("战斗类型: "..fightType.."\n战斗计数: "..tostring(loopCount+1).."/"..tostring(param.repeatCount).."/"..tostring(failCount).."\n购买体力: "..tostring(param.buyEnergyCount));
     if actionFlag and (actionName=="again" or actionName=="nextLevel") then
       littleBossFlag=false;
       finalBossFlag=false;

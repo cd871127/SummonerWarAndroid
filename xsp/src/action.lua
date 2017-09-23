@@ -55,13 +55,40 @@ function action.defeat(param)
   return common.clickPoint(param.points.defeat);
 end;
 
-function action.notEnoughEnergyBuy()
-  return false;
+function action.notEnoughEnergy(param)
+  --判断是否能量不够
+  local isNotEnoughEnergy=common.checkPoint(param.points.notEnoughEnergy);
+  
+  if isNotEnoughEnergy then
+    --判断是否要买体力
+    if param.isBuyEnergy and param.buyEnergyCount>0 then
+      param.buyEnergyCount=param.buyEnergyCount-1
+      --购买体力的逻辑
+			while not common.clickPoint(param.points.notEnoughEnergy) do
+			end
+			
+			while not common.clickPoint(param.points.energy) do
+			end
+			
+			while not common.clickPoint(param.points.confirmBuyEnergy) do
+			end
+			
+			while not common.clickPoint(param.points.finishBuy) do
+			end
+			
+			while not common.clickPoint(param.points.closeEnergyUI) do
+			end
+			
+      return true;
+    else
+      common.exit();
+    end
+  else
+    return false;
+  end
+  
 end;
 
-function action.notEnoughEnergyNotBuy()
-  return false;
-end;
 
 function action.resendFightInfo(param)
   return common.clickPoint(param.points.resendFightInfo);
@@ -91,6 +118,16 @@ function action.littleBoss(param)
   end
 end;
 
+function action.nextLevel(param)
+  return common.clickPoint(param.points.nextLevel);
+end;
 
+function action.stop(param)
+  common.exit();
+end;
+
+function action.saleFiveStarRune(param)
+return common.clickPoint(param.points.saleFiveStarRune);
+end;
 
 return action;

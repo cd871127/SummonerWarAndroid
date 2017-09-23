@@ -11,13 +11,12 @@ function status.init.common()
   status.common.victory={success="noRGB",fail="noResurgence"};
   status.common.defeat={success="again",fail="defeat"};
   status.common.noResurgence={success="defeat",fail="resendFightResult"};
-  status.common.again={success="startFight",fail="again"};
-  status.common.notEnoughEnergyBuy={success="",fail=""};
-  status.common.notEnoughEnergyNotBuy={success="",fail=""};
+  status.common.again={success="notEnoughEnergy",fail="notEnoughEnergy"};
   status.common.resendFightInfo={success="gear",fail="gear"};
   status.common.resendFightResult={success="victory",fail="victory"};
   status.common.noRGB={success="",fail="victory"};
   status.common.confirmReward={success="again",fail=""};
+	status.common.notEnoughEnergy={success="again",fail="startFight"};
 end;
 --status.common.keyStatus={"startFight","autoFight","noAutoFight","noResurgence"};
 
@@ -29,8 +28,9 @@ function status.init.dogFood()
   status.dogFood.noAutoFight={success="autoFight",fail="autoFight"};
   status.dogFood.autoFight={success="victory",fail="noAutoFight"};
   status.dogFood.noRGB.success="saleRune";
-  status.dogFood.saleRune={success="again",fail="confirmReward"};
-  status.dogFood.resendFightResult.fail="autoFight";
+  status.dogFood.saleRune={success="saleFiveStarRune",fail="confirmReward"};
+	status.dogFood.saleFiveStarRune={success="again",fail="again"};
+--  status.dogFood.resendFightResult.fail="autoFight";
   status.dogFood.confirmReward.fail="saleRune";
   --status.common.saleFiveStarRune={success="",fail=""};
 end;
@@ -53,12 +53,19 @@ function status.init.rune()
   status.rune.keepRune={success="again",fail="confirmReward"};
   status.rune.littleBoss={success="finalBoss",fail="finalBoss"};
 end;
+
+--百塔状态
+function status.init.tower()
+  status.init.dogFood();
+  status.tower=status.dogFood;
+  status.tower.noRGB.success="confirmReward";
+	status.tower.confirmReward={success="nextLevel",fail="confirmReward"};
+	status.tower.nextLevel={success="startFight",fail="nextLevel"};
+	status.tower.victory.fail="defeat";
+	status.tower.defeat={success="stop",fail="noAutoFight"};
+end;
+
 --三星碎片状态
 --status.threeStar=status.awake;
---百塔状态
---status.common.nextLevel={success="",fail=""};
-
-
-
 
 return status;

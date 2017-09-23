@@ -1,6 +1,6 @@
 local paramter={};
 paramter.height,paramter.width = getScreenSize();
-paramter.startStatus="startFight";
+paramter.startStatus="again";
 --paramter.startStatus="finalBoss";
 
 --分辨率为1440 2560的设备
@@ -39,8 +39,20 @@ function paramter.d14402560()
 	points.finalBoss={{83,313,95,323},{{x=0,y=0,color=0x371c14},{x=9,y=-1,color=0xd5cfc4},{x=16,y=-1,color=0x371c14},{x=28,y=-1,color=0xfffcec},{x=39,y=0,color=0x3d2319},{x=46,y=0,color=0xd9d1bf},{x=-13,y=0,color=0xf5ecd6},{x=-1,y=14,color=0xf3e9d2},{x=-2,y=-7,color=0xdad3c1}},95,0,0,0};
 	--小boss
 	points.littleBoss={{91,204,95,210},{{x=0,y=0,color=0x371c14},{x=9,y=-1,color=0xd5cfc4},{x=16,y=-1,color=0x371c14},{x=28,y=-1,color=0xfffcec},{x=39,y=0,color=0x3d2319},{x=46,y=0,color=0xd9d1bf},{x=-13,y=0,color=0xf5ecd6},{x=-1,y=14,color=0xf3e9d2},{x=-2,y=-7,color=0xdad3c1}},95,0,0,0};
-
-	
+	--刷塔下一层
+	points.nextLevel={{649,738,712,792},{{x=0,y=0,color=0xf8e9ad},{x=21,y=0,color=0xf8e9ad},{x=21,y=16,color=0xf8e9ad},{x=43,y=25,color=0xf8e9ad},{x=21,y=45,color=0xf8e9ad},{x=59,y=21,color=0xf8e9ad},{x=88,y=20,color=0xf8e9ad},{x=107,y=20,color=0xf8e9ad},{x=163,y=-2,color=0xf8e9ad},{x=164,y=45,color=0xf8e9ad}},95,0,0,0};
+	--能量不够
+	points.notEnoughEnergy={{1015,825,1084,897},{{x=0,y=0,color=0xf8e9ad},{x=0,y=6,color=0xf8e9ad},{x=11,y=4,color=0x412702},{x=406,y=-267,color=0xe2c582},{x=408,y=-262,color=0x482e1f},{x=414,y=-262,color=0xe2c582},{x=402,y=-261,color=0xe2c582},{x=406,y=-244,color=0x482e1f},{x=406,y=-238,color=0xe2c582}},95,0,0,0};
+	--点能量
+	points.energy={{663,859,773,927},{{x=0,y=0,color=0xf5e5c1},{x=0,y=-3,color=0x8c2f07},{x=0,y=-10,color=0x8c2f07},{x=0,y=-12,color=0xf5e5c1},{x=-13,y=162,color=0xda1a4b},{x=522,y=-532,color=0x0b7dd3},{x=1025,y=-560,color=0xdb1c4c},{x=87,y=-573,color=0xfad36b},{x=9,y=-220,color=0xffcc66},{x=31,y=-176,color=0xeec455}},95,0,0,0};
+	--确定购买能量
+	points.confirmBuyEnergy={{1030,850,1098,904},{{x=0,y=0,color=0xf8e9ad},{x=1,y=4,color=0x412702},{x=1,y=9,color=0xf8e9ad},{x=1,y=12,color=0x412702},{x=-278,y=-543,color=0xbb9d4e},{x=214,y=-518,color=0x002d6b},{x=661,y=-540,color=0xa21236},{x=643,y=-519,color=0xab0f35},{x=210,y=-523,color=0x002560},{x=-286,y=-513,color=0xbb9d4e}},95,0,0,0};
+	--购买完毕的确认按钮
+	points.finishBuy={};
+	--关闭买能量的界面
+	points.closeEnergyUI={{1210,1199,1344,1268},{{x=0,y=0,color=0xf8f0cf},{x=4,y=-6,color=0x412702},{x=7,y=-11,color=0xcda05b},{x=-461,y=-904,color=0xf8cf67},{x=-25,y=-870,color=0x0b80d6},{x=482,y=-901,color=0xdc1c4d},{x=643,y=-486,color=0x003388},{x=-564,y=-169,color=0xe02050}},95,0,0,0};
+	--出售5星符文
+	points.saleFiveStarRune={{1003,826,1102,910},{{x=0,y=0,color=0xf8e9ad},{x=6,y=4,color=0x412702},{x=5,y=8,color=0xf8e9ad},{x=5,y=12,color=0x412702},{x=448,y=0,color=0xf8e9ad},{x=461,y=12,color=0xf8e9ad},{x=465,y=33,color=0xf8e9ad},{x=464,y=38,color=0x412702},{x=458,y=47,color=0xf8e9ad}},95,0,1,0};
 	return points;
 end;
 
