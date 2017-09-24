@@ -1,4 +1,17 @@
 local common={};
+
+common.isDebug=false;
+
+if common.isDebug then
+	common.log=function(message)
+	sysLog(message)
+	end
+else
+	common.log=function(message)
+	fileLogWrite("swLog",1,"INFO",message)
+	end
+end;
+
 --点击坐标x,y
 common.click=function(x,y)
   touchDown(1, x, y);
@@ -45,8 +58,9 @@ end;
 common.clickPoint=function(colorPoint)
   local flag,x,y=common.checkPoint(colorPoint);
   if flag then
-    common.sleep(0.5);
+    common.sleep(0.2);
     common.click(x,y);
+		common.sleep(0.3);
   end
   return flag;
 end;

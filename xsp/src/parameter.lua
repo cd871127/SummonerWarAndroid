@@ -1,6 +1,6 @@
 local paramter={};
 paramter.height,paramter.width = getScreenSize();
-paramter.startStatus="again";
+paramter.startStatus="startFight";
 --paramter.startStatus="finalBoss";
 
 --分辨率为1440 2560的设备

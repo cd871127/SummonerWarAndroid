@@ -31,7 +31,7 @@ function controller.exec(param)
         littleBossFlag=true;
       end;
     elseif cacheActionName=='finalBoss' then
-		sysLog(tostring(finalBossFlag));
+		common.log(tostring(finalBossFlag));
       actionName,actionFlag=controller.doAction(actionName,status[fightType][actionName],param,finalBossFlag);
       if actionFlag then
         finalBossFlag=true;
@@ -44,16 +44,16 @@ end;
 
 --执行action
 function controller.doAction(actionName,curStatus,param,bossFlag)
-  sysLog("do: "..actionName);
+  common.log("do: "..actionName);
  
   if (actionName=='finalBoss' or actionName=='littleBoss') and bossFlag==true then
     return curStatus.success,true;
   else	
     if action[actionName](param) then
-      sysLog("success: "..curStatus.success)
+      common.log("success: "..curStatus.success)
       return curStatus.success,true;
     else
-      sysLog("failed: "..curStatus.fail)
+      common.log("failed: "..curStatus.fail)
       return curStatus.fail,false;
     end
   end

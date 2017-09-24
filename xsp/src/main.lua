@@ -72,7 +72,7 @@ x, y = findColor({2129, 1042, 2153, 1061},
 --},
 --95, 0, 0, 0)
 i=i+1;end;
-sysLog(os.clock()-start);
+common.log(os.clock()-start);
 end;
 
 --test();

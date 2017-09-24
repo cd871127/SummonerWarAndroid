@@ -11,7 +11,7 @@ function status.init.common()
   status.common.victory={success="noRGB",fail="noResurgence"};
   status.common.defeat={success="again",fail="defeat"};
   status.common.noResurgence={success="defeat",fail="resendFightResult"};
-  status.common.again={success="notEnoughEnergy",fail="notEnoughEnergy"};
+  status.common.again={success="notEnoughEnergy",fail="again"};
   status.common.resendFightInfo={success="gear",fail="gear"};
   status.common.resendFightResult={success="victory",fail="victory"};
   status.common.noRGB={success="",fail="victory"};
