@@ -1,6 +1,7 @@
 local controller=require("controller");
 local param=require("parameter");
 local ui=require("ui");
+local common=require("common");
 function main()
   init("0", 1); --以当前应用 Home 键在右边初始化
   
@@ -20,10 +21,12 @@ function main()
   else
     param.buyEnergyCount=0;
   end
+--	common.time=tostring(os.time());
   controller.exec(param);
 end;
 
 main();
+
 
 function test()
 local start=os.clock();

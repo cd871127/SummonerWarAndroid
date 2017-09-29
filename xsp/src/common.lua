@@ -1,6 +1,7 @@
 local common={};
 
 common.isDebug=false;
+common.time=tostring(os.time());
 
 if common.isDebug then
 	common.log=function(message)
@@ -8,7 +9,7 @@ if common.isDebug then
 	end
 else
 	common.log=function(message)
-	fileLogWrite("swLog",1,"INFO",message)
+	fileLogWrite("xsp/swlog/"..common.time,0,"INFO",message)
 	end
 end;
 

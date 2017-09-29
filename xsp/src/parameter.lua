@@ -24,7 +24,7 @@ function paramter.d14402560()
 	--再来一次按钮
 	points.again={{757,758,833,794},{{x=0,y=0,color=0xf8e9ad},{x=5,y=0,color=0xf8e9ad},{x=15,y=0,color=0xf8e9ad},{x=21,y=0,color=0xf8e9ad},{x=40,y=0,color=0xf8e9ad},{x=49,y=0,color=0xf8e9ad},{x=-117,y=-19,color=0xf8e9ad},{x=112,y=25,color=0xf8e9ad},{x=-34,y=27,color=0xf8e9ad}},95,0,0,0};
   --不复活的按钮
-	points.noResurgence={{1613,901,1688,935},{{x=0,y=0,color=0xf8e9ad},{x=52,y=1,color=0xf8e9ad},{x=-2,y=22,color=0xf8e9ad},{x=56,y=21,color=0xf8e9ad},{x=-444,y=-722,color=0xffff37},{x=-414,y=-707,color=0xfcfd34},{x=-296,y=-698,color=0xeff22e},{x=-257,y=-645,color=0x9fbb33}},95,0,0,0};
+	points.noResurgence={{1621,899,1689,956},{{x=0,y=0,color=0xf8e9ad},{x=-2,y=25,color=0xf8e9ad},{x=24,y=-4,color=0xf8e9ad},{x=-29,y=-4,color=0xf8e9ad},{x=-148,y=-199,color=0xffffff},{x=-303,y=-211,color=0xffffff},{x=-440,y=-209,color=0xffffff},{x=-559,y=-225,color=0xffffff},{x=-757,y=-176,color=0xffffff}},95,0,0,0};
 	--失败的图标
 	points.defeat={{1160,173,1200,205},{{x=0,y=0,color=0xffff40},{x=31,y=-7,color=0xf7f630},{x=116,y=2,color=0xffff3b},{x=180,y=-7,color=0xffff37},{x=220,y=17,color=0xffff7c},{x=187,y=82,color=0x9ab934},{x=79,y=95,color=0x80a12e},{x=-20,y=95,color=0x7b972a}},95,0,0,0};
 	--出售符文的按钮
