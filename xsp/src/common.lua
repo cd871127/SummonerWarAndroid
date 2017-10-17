@@ -1,6 +1,6 @@
 local common={};
 
-common.isDebug=false;
+common.isDebug=true;
 common.time=tostring(os.time());
 
 if common.isDebug then

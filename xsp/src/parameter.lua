@@ -48,7 +48,7 @@ function paramter.d14402560()
 	--确定购买能量
 	points.confirmBuyEnergy={{1030,850,1098,904},{{x=0,y=0,color=0xf8e9ad},{x=1,y=4,color=0x412702},{x=1,y=9,color=0xf8e9ad},{x=1,y=12,color=0x412702},{x=-278,y=-543,color=0xbb9d4e},{x=214,y=-518,color=0x002d6b},{x=661,y=-540,color=0xa21236},{x=643,y=-519,color=0xab0f35},{x=210,y=-523,color=0x002560},{x=-286,y=-513,color=0xbb9d4e}},95,0,0,0};
 	--购买完毕的确认按钮
-	points.finishBuy={};
+	points.finishBuy={{0,0,2559,1439},{{x=0,y=0,color=0xf8e9ad,offset=0x000555},{x=4,y=8,color=0xf8e9ad},{x=8,y=29,color=0x412702},{x=-1,y=-531,color=0x00567d},{x=491,y=-523,color=0x6f0c24},{x=-437,y=-538,color=0x826e38},{x=-53,y=-310,color=0xe2c582},{x=-52,y=-307,color=0x503624}},95,0,0,0};
 	--关闭买能量的界面
 	points.closeEnergyUI={{1210,1199,1344,1268},{{x=0,y=0,color=0xf8f0cf},{x=4,y=-6,color=0x412702},{x=7,y=-11,color=0xcda05b},{x=-461,y=-904,color=0xf8cf67},{x=-25,y=-870,color=0x0b80d6},{x=482,y=-901,color=0xdc1c4d},{x=643,y=-486,color=0x003388},{x=-564,y=-169,color=0xe02050}},95,0,0,0};
 	--出售5星符文

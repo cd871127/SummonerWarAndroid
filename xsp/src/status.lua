@@ -62,7 +62,7 @@ function status.init.tower()
 	status.tower.confirmReward={success="nextLevel",fail="confirmReward"};
 	status.tower.nextLevel={success="startFight",fail="nextLevel"};
 	status.tower.victory.fail="defeat";
-	status.tower.defeat={success="stop",fail="noAutoFight"};
+	status.tower.defeat={success="stop",fail="resendFightResult"};
 end;
 
 --三星碎片状态
