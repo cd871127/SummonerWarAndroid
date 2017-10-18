@@ -130,4 +130,29 @@ function action.saleFiveStarRune(param)
 return common.clickPoint(param.points.saleFiveStarRune);
 end;
 
+function action.otherWorldStart(param)
+return common.clickPoint(param.points.otherWorldStart);
+end;
+
+function action.otherWorlFailed(param)
+return common.clickPoint(param.points.otherWorlFailed);
+end;
+
+function action.otherWorlVictory(param)
+return common.clickPoint(param.points.otherWorlVictory);
+end;
+
+function action.otherWorlGetStone(param)
+return common.clickPoint(param.points.otherWorlGetStone);
+end;
+
+function action.otherWorlAgain(param)
+return common.clickPoint(param.points.otherWorlAgain);
+end;
+
+function action.otherWorlGear(param)
+  local res=common.checkPoint(param.points.otherWorlGear);
+  return res;
+end;
+
 return action;

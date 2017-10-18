@@ -20,7 +20,7 @@ function paramter.d14402560()
 	--可以看到胜利,但是看不到蓝黄红
 	points.noRGB={{1148,173,1200,219},{{x=0,y=0,color=0xffff32},{x=-3,y=54,color=0xfef7ae},{x=81,y=20,color=0xfffe34},{x=163,y=52,color=0xfffded},{x=223,y=106,color=0xffb70a},{x=162,y=3,color=0xffff33},{x=-485,y=544,color=0x2c92ed},{x=814,y=534,color=0xd61846}},95,0,0,0};
 	--奖励的确认按钮
-	points.confirmReward={{1203,1058,1247,1281},{{x=0,y=0,color=0xf4e5a9},{x=12,y=37,color=0x533810},{x=11,y=41,color=0xf4e5a9},{x=7,y=27,color=0xf4e5a9},{x=81,y=49,color=0xf4e5a9},{x=113,y=48,color=0xf4e5a9},{x=116,y=53,color=0x533810},{x=116,y=42,color=0x533810},{x=95,y=-2,color=0xf4e5a9}},95,0,0,0};
+	points.confirmReward={{1203,950,1247,1281},{{x=0,y=0,color=0xf4e5a9},{x=12,y=37,color=0x533810},{x=11,y=41,color=0xf4e5a9},{x=7,y=27,color=0xf4e5a9},{x=81,y=49,color=0xf4e5a9},{x=113,y=48,color=0xf4e5a9},{x=116,y=53,color=0x533810},{x=116,y=42,color=0x533810},{x=95,y=-2,color=0xf4e5a9}},95,0,0,0};
 	--再来一次按钮
 	points.again={{757,758,833,794},{{x=0,y=0,color=0xf8e9ad},{x=5,y=0,color=0xf8e9ad},{x=15,y=0,color=0xf8e9ad},{x=21,y=0,color=0xf8e9ad},{x=40,y=0,color=0xf8e9ad},{x=49,y=0,color=0xf8e9ad},{x=-117,y=-19,color=0xf8e9ad},{x=112,y=25,color=0xf8e9ad},{x=-34,y=27,color=0xf8e9ad}},95,0,0,0};
   --不复活的按钮
@@ -53,6 +53,18 @@ function paramter.d14402560()
 	points.closeEnergyUI={{1210,1199,1344,1268},{{x=0,y=0,color=0xf8f0cf},{x=4,y=-6,color=0x412702},{x=7,y=-11,color=0xcda05b},{x=-461,y=-904,color=0xf8cf67},{x=-25,y=-870,color=0x0b80d6},{x=482,y=-901,color=0xdc1c4d},{x=643,y=-486,color=0x003388},{x=-564,y=-169,color=0xe02050}},95,0,0,0};
 	--出售5星符文
 	points.saleFiveStarRune={{1003,826,1102,910},{{x=0,y=0,color=0xf8e9ad},{x=6,y=4,color=0x412702},{x=5,y=8,color=0xf8e9ad},{x=5,y=12,color=0x412702},{x=448,y=0,color=0xf8e9ad},{x=461,y=12,color=0xf8e9ad},{x=465,y=33,color=0xf8e9ad},{x=464,y=38,color=0x412702},{x=458,y=47,color=0xf8e9ad}},95,0,1,0};
+	--异界准备
+	points.otherWorldStart={{2154,1272,2268,1338},{{x=0,y=0,color=0xcea64b},{x=13,y=6,color=0xf8e9ad},{x=22,y=3,color=0x412702},{x=24,y=-1,color=0xcba149},{x=-2055,y=-1254,color=0xf1eecf},{x=-2049,y=-1249,color=0x5d2d10},{x=-2048,y=-1244,color=0xf1eecf},{x=-2044,y=-1238,color=0x5d2d10}},95,0,0,0};
+	--异界失败
+	points.otherWorlFailed={{1161,206,1209,247},{{x=0,y=0,color=0xfcfb57},{x=33,y=21,color=0xf9fa34},{x=20,y=77,color=0xa7c13a},{x=-14,y=161,color=0xfffee2},{x=-9,y=159,color=0x110b03},{x=127,y=5,color=0xfefe34},{x=37,y=168,color=0xfffee2},{x=165,y=99,color=0x85a934}},95,0,0,0};
+	--异界胜利
+	points.otherWorlVictory={{1137,134,1238,230},{{x=0,y=0,color=0xeee93d},{x=-3,y=50,color=0xeee298},{x=21,y=72,color=0xecc12a},{x=66,y=66,color=0xe9ce66},{x=78,y=99,color=0xecab18},{x=0,y=164,color=0xfffee2},{x=-5,y=166,color=0x110b03},{x=2,y=190,color=0xfffee2},{x=6,y=190,color=0x110b03},{x=157,y=3,color=0xece739}},95,0,0,0};
+	--异界获得道具
+	points.otherWorlGetStone={{1369,891,1432,945},{{x=0,y=0,color=0xf4e5a9},{x=6,y=6,color=0x533810},{x=0,y=10,color=0xf4e5a9},{x=-6,y=15,color=0x533810},{x=-358,y=-28,color=0xf4e5a9},{x=-342,y=-27,color=0xf4e5a9},{x=-331,y=-46,color=0xd4ac62}},95,0,0,0};
+	--异界再次挑战
+	points.otherWorlAgain={{1022,831,1085,876},{{x=0,y=0,color=0x412702},{x=0,y=-3,color=0xf8e9ad},{x=2,y=13,color=0xf8e9ad},{x=3,y=18,color=0x472e08},{x=13,y=23,color=0xf8e9ad},{x=19,y=28,color=0x412702},{x=-148,y=-315,color=0xe2c582},{x=-145,y=-309,color=0x482e1f},{x=-145,y=-303,color=0xe2c582}},95,0,0,0};
+	--异界齿轮(战斗标志)
+	points.otherWorlGear={{47,1299,101,1345},{{x=0,y=0,color=0xffffff},{x=19,y=-8,color=0xffffff},{x=49,y=1,color=0xffffff},{x=85,y=-33,color=0xffffff},{x=86,y=90,color=0xffffff},{x=-38,y=84,color=0xffffff},{x=-39,y=-29,color=0xffffff},{x=25,y=60,color=0xffffff},{x=51,y=51,color=0xffffff}},95,0,0,0};
 	return points;
 end;
 

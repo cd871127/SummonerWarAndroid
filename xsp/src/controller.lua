@@ -6,6 +6,9 @@ local controller={};
 function controller.exec(param)
   local loopCount=0;
   local failCount=0;
+	if param.fightType=='otherWorld' then
+    param.startStatus="otherWorldStart";
+  end;
   local actionName=param.startStatus;
   local fightType=param.fightType;
   --action的完成状态
@@ -33,7 +36,7 @@ function controller.exec(param)
       end;
     else
       actionName,actionFlag=controller.doAction(actionName,status[fightType][actionName],param,false);
-      if actionFlag and (cacheActionName=="again" or cacheActionName=="nextLevel") then
+      if actionFlag and (cacheActionName=="again" or cacheActionName=="nextLevel" or cacheActionName=="otherWorlAgain") then
         littleBossFlag=false;
         finalBossFlag=false;
         loopCount=loopCount+1;

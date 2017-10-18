@@ -67,5 +67,27 @@ end;
 
 --三星碎片状态
 --status.threeStar=status.awake;
+function status.init.threeStar()
+  status.init.dogFood();
+  status.threeStar=status.dogFood;
+  status.threeStar.noRGB.success="confirmReward";
+  status.threeStar.confirmReward.fail="confirmReward";
+  status.threeStar.autoFight.success="finalBoss";
+  status.threeStar.finalBoss={success="victory",fail="autoFight"};
+end;
+
+function status.init.otherWorld()
+status.otherWorld={};
+status.otherWorld.otherWorldStart={success="otherWorlGear",fail="otherWorldStart"};
+status.otherWorld.otherWorlGear={success="otherWorlVictory",fail="resendFightInfo"};
+status.otherWorld.resendFightInfo={success="otherWorlGear",fail="otherWorlGear"};
+status.otherWorld.otherWorlFailed={success="otherWorlAgain",fail="resendFightResult"};
+status.otherWorld.resendFightResult={success="otherWorlVictory",fail="otherWorlVictory"};
+status.otherWorld.otherWorlVictory={success="otherWorlGetStone",fail="otherWorlFailed"};
+status.otherWorld.confirmReward={success="otherWorlAgain",fail="otherWorlVictory"};
+status.otherWorld.otherWorlGetStone={success="otherWorlAgain",fail="confirmReward"};
+status.otherWorld.otherWorlAgain={success="notEnoughEnergy",fail="otherWorlAgain"};
+status.otherWorld.notEnoughEnergy={success="otherWorlVictory",fail="otherWorldStart"};
+end;
 
 return status;
